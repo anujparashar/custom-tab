@@ -1,0 +1,9 @@
+<div class="tab-set-container">
+    <div *ngFor="let tab of tabs" (click)="selectTab(tab)" class="tab-list" [ngClass]="{'activeTab': tab.active}">
+        {{tab.nzTitle}}
+    </div>
+</div>
+<!-- projected tab data below  -->
+<div class="tab-data">
+    <ng-content></ng-content>
+</div>
